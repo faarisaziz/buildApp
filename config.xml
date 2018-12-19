@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>helloworld</name>
+<widget id="com.remittance.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Remittance</name>
     <description>
-        A blank PhoneGap app.
+        Remittance and PPOB app.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="support@remittance.com" href="http://remittance.com">
         PhoneGap Team
     </author>
     <content src="index.html" />
