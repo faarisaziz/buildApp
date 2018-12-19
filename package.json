@@ -1,0 +1,17 @@
+{
+  "name": "com.phonegap.helloworld",
+  "version": "1.0.0",
+  "displayName": "helloworld",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-sqlite-storage": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "~7.1.4",
+    "cordova-sqlite-storage": "~2.6.0"
+  }
+}

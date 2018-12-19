@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Remittance</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/costum.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/slick.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="one">
+      <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
+        <h1 class="ui-title ui-title-costum" role="heading" aria-level="1">Remittance</h1>
+        <a href="#" class="ui-btn ui-shadow ui-btn-right ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Options</a>
+        <div data-role="navbar" class="ui-navbar" role="navigation">
+          <ul class="ui-grid-b">
+            <li class="ui-block-a">
+              <a href="#" data-icon="home" class="ui-btn-active ui-link ui-btn ui-icon-home ui-btn-icon-top">Home</a>
+            </li>
+            <li class="ui-block-b">
+              <a href="#" data-icon="recycle" class="ui-link ui-btn ui-icon-recycle ui-btn-icon-top">Transfer</a>
+            </li>
+            <li class="ui-block-c">
+              <a href="#" data-icon="bars" class="ui-link ui-btn ui-icon-bars ui-btn-icon-top">History</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div role="main" class="ui-content">
+        <div class="ui-grid-a ui-cash">
+          <div class="ui-block-a">
+            <div class="ui-bar ui-bar-a">
+              <div class="cash-title">My Cash</div>
+              <div class="cash-amount">Rp <span class="balance-field">0</span></div>
+              <div class="cash-point">Points <span>0</span></div>
+            </div>
+          </div>
+          <div class="ui-block-b">
+            <div class="ui-bar ui-bar-a">
+              <a href="#topup" class="ui-btn ui-btn-topup">Topup</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-grid-b">
+          <div class="ui-block-a">
+            <a href="#two" class="ui-shadow ui-btn ui-corner-all">
+              <div class="ppob-icon"><img src="img/ico/pln.png" alt="PLN"></div>
+              <div class="ppob-label">PLN</div>
+            </a>
+          </div>
+          <div class="ui-block-b">
+            <a href="#popup" data-rel="dialog" data-transition="pop" class="ui-shadow ui-btn ui-corner-all">
+              <div class="ppob-icon"><img src="img/ico/pulsa.png" alt="Pulsa"></div>
+              <div class="ppob-label">Pulsa</div>
+            </a>
+          </div>
+          <div class="ui-block-c">
+            <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              <div class="ppob-icon"><img src="img/ico/paket-data.png" alt="Paket Data"></div>
+              <div class="ppob-label">Paket Data</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="ui-grid-b">
+          <div class="ui-block-a">
+            <a href="#" class="ui-shadow ui-btn ui-corner-all">
+            	<div class="ppob-icon"><img src="img/ico/pembayaran.png" alt="Pembayaran"></div>
+              <div class="ppob-label">Pembayaran</div>
+            </a>
+          </div>
+          <div class="ui-block-b">
+            <a href="#" class="ui-shadow ui-btn ui-corner-all">
+            	<div class="ppob-icon"><img src="img/ico/bpjs.png" alt="BPJS"></div>
+              <div class="ppob-label">BPJS</div>
+            </a>
+          </div>
+          <div class="ui-block-c">
+            <a href="#" class="ui-shadow ui-btn ui-corner-all">
+            	<div class="ppob-icon"><img src="img/ico/tv.png" alt="TV Kabel"></div>
+              <div class="ppob-label">TV Kabel</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="ui-grid-b">
+          <div class="ui-block-a">
+            <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              <div class="ppob-icon"><img src="img/ico/insurance.png" alt="Asuransi"></div>
+              <div class="ppob-label">Asuransi</div>
+            </a>
+          </div>
+          <div class="ui-block-b">
+            <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              <div class="ppob-icon"><img src="img/ico/voucher.png" alt="Voucher Game"></div>
+              <div class="ppob-label">Game</div>
+            </a>
+          </div>
+          <div class="ui-block-c">
+            <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              <div class="ppob-icon"><img src="img/ico/more.png" alt="Semua"></div>
+              <div class="ppob-label">Semua</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="footer">
+        <div class="banner-item">
+          <div class="banner-item-list">
+            <img src="img/banner.png" alt="Banner 1">
+          </div>
+          <div class="banner-item-list">
+            <img src="img/banner.png" alt="Banner 2">
+          </div>
+          <div class="banner-item-list">
+            <img src="img/banner.png" alt="Banner 3">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-role="page" id="topup">
+      <div data-role="header" data-theme="b">
+        <h1>Topup</h1>
+      </div>
+
+      <div role="main" class="ui-content">
+        <div class="ui-grid-solo ui-cash">
+          <div class="ui-block-a">
+            <div class="ui-bar ui-bar-a">
+              <div class="cash-title">Amount</div>
+              <input type="number" id="topup-balance">
+              <a href="#topup" data-rel="back" class="ui-btn ui-btn-topup" onclick="topupBalance()">Transfer Sekrang</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="alert-dev">*berikut ini merupakah dummy (development still progress)</p>
+
+        <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back</a>
+      </div>
+    </div>
+
+    <div data-role="page" id="two" data-theme="a">
+      <div data-role="header">
+        <h1>Two</h1>
+      </div>
+
+      <div role="main" class="ui-content">
+        <h2>Two</h2>
+        <p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>
+        <p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>
+        <p><a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "one"</a></p>
+      </div>
+
+      <div data-role="footer">
+        <h4>Page Footer</h4>
+      </div>
+    </div>
+
+    <div data-role="page" id="popup">
+      <div data-role="header" data-theme="b">
+        <h1>Dialog</h1>
+      </div>
+
+      <div role="main" class="ui-content">
+        <h2>Popup</h2>
+        <p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+        <p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p>
+      </div>
+
+      <div data-role="footer">
+        <h4>Page Footer</h4>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+      $(document).on("ready", function() {
+        var client_id = localStorage.getItem("client_id");
+
+        if( client_id == null || client_id == "" ) {
+          initClientID();
+        } else {
+          refreshBalance();
+        }
+
+        $(".banner-item").slick({ autoplay: true, autoplaySpeed: 5000 });
+      });
+
+      function initClientID() {
+        var phone;
+        var number = prompt("Masukan no handphone Anda", "");
+
+        if (number == null || number == "") {
+          location.reload();
+        } else {
+          phone = number;
+        }
+
+        localStorage.setItem("client_id", phone);
+        initBalance();
+      }
+
+      function initBalance() {
+        localStorage.setItem("balance", 0);
+      }
+
+      function topupBalance() {
+        var amount = $("#topup-balance").val();
+        var balance = localStorage.getItem("balance");
+
+        localStorage.setItem("balance", parseInt(balance) + parseInt(amount));
+        refreshBalance();
+      }
+
+      function refreshBalance() {
+        $('.balance-field').html(localStorage.getItem("balance"));
+        $("#topup-balance").val("");
+      }
+    </script>
+  </body>
+</html>
