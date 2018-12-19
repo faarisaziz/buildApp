@@ -1,10 +1,10 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "helloworld",
-  "short_name": "helloworld",
-  "version": "com.phonegap.helloworld",
-  "description": "A blank PhoneGap app.",
+  "name": "Remittance",
+  "short_name": "Remittance",
+  "version": "com.remittance.app",
+  "description": "Remittance and PPOB app.",
   "author": "PhoneGap Team",
   "icons": [],
   "start_url": "index.html"
