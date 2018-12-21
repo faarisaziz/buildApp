@@ -34,8 +34,13 @@
   margin: 3px;
 }
 
+.banner-item-list {
+  margin-left: -35px;
+}
+
 .banner-item-list img {
-  width: 100%;
+  width: 280px;
+  border-radius: 5px;
 }
 
 .alert-dev {
@@ -102,4 +107,9 @@ ul.setting-list.ui-listview {
 
 .ui-wallet-detail div.total {
   font-weight: 600;
+}
+
+.footer-with-banner.ui-footer.ui-bar-inherit {
+  background: none;
+  border: none;
 }

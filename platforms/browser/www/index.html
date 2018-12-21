@@ -113,7 +113,7 @@
         </div>
       </div>
 
-      <div data-role="footer">
+      <div data-role="footer" class="footer-with-banner">
         <div class="banner-item">
           <div class="banner-item-list">
             <img src="img/banner.png" alt="Banner 1">
@@ -388,7 +388,13 @@
           refreshBalance();
         }
 
-        $(".banner-item").slick({ autoplay: true, autoplaySpeed: 5000 });
+        $(".banner-item").slick({ 
+          slidesToShow: 1,
+          slidesToScroll: 1, 
+          autoplay: true, 
+          autoplaySpeed: 5000,
+          centerMode: true
+        });
       });
 
       function initClientID() {
