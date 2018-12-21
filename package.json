@@ -1,7 +1,7 @@
 {
-  "name": "com.phonegap.helloworld",
+  "name": "com.remittance.app",
   "version": "1.0.0",
-  "displayName": "helloworld",
+  "displayName": "remittance",
   "cordova": {
     "platforms": [
       "android"

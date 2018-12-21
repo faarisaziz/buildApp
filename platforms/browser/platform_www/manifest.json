@@ -1,6 +1,6 @@
 {
-  "name": "helloworld",
-  "short_name": "helloworld",
+  "name": "remittance",
+  "short_name": "remittance",
   "description": "Description of your app from template",
   "start_url": "index.html",
   "scope": "index.html",
