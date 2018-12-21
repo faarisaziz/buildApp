@@ -44,3 +44,62 @@
   font-weight: 600;
   letter-spacing: 0.8px;
 }
+
+.ui-wallet {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.ui-wallet-box .ui-block-a .ui-bar {
+  padding: 20px;
+}
+
+.ui-wallet-box .ui-block-a .ui-bar .ui-btn-topup {
+  margin: 0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.ui-wallet-box .ui-block-a .ui-bar input[type=number],
+.ui-wallet-box .ui-block-a .ui-bar input[type=text] {
+  font-size: 14px;
+  padding: 10px;
+}
+
+ul.setting-list.ui-listview {
+  margin-top: 15px;
+}
+
+.setting-list li, .setting-list li a {
+  background: none !important;
+}
+
+.setting-list li.ui-li-divider {
+  margin-top: 15px;
+}
+
+.setting-list li a.ui-btn {
+  font-size: 12px;
+  font-weight: normal;
+  padding-left: 25px;
+}
+
+.ui-wallet-detail .title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.ui-wallet-detail .ui-block-a div {
+  font-size: 13px;
+}
+
+.ui-wallet-detail .ui-block-b div {
+  font-size: 13px;
+  text-align: right;
+}
+
+.ui-wallet-detail div.total {
+  font-weight: 600;
+}
