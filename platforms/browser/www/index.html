@@ -18,7 +18,7 @@
       <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
         <h1 class="ui-title ui-title-costum" role="heading" aria-level="1">Remittance</h1>
         <a href="#rightpanel1" class="ui-btn ui-shadow ui-btn-right ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Options</a>
-        <div data-role="navbar" class="ui-navbar" role="navigation">
+        <div data-role="navbar" class="ui-navbar" role="navigation" style="position: fixed; bottom: 0; left: 0; z-index: 1000; right: 0 ">
           <ul class="ui-grid-b">
             <li class="ui-block-a">
               <a href="#transfer" data-transition="slide" data-icon="recycle" class="ui-link ui-btn ui-icon-recycle ui-btn-icon-top">Transfer</a>
@@ -115,6 +115,20 @@
 
       <div data-role="footer" class="footer-with-banner">
         <div class="banner-item">
+          <div class="banner-item-list">
+            <img src="img/banner.png" alt="Banner 1">
+          </div>
+          <div class="banner-item-list">
+            <img src="img/banner.png" alt="Banner 2">
+          </div>
+          <div class="banner-item-list">
+            <img src="img/banner.png" alt="Banner 3">
+          </div>
+        </div>
+
+        <br>
+
+        <div class="banner-item-2">
           <div class="banner-item-list">
             <img src="img/banner.png" alt="Banner 1">
           </div>
@@ -393,6 +407,14 @@
           slidesToScroll: 1, 
           autoplay: true, 
           autoplaySpeed: 5000,
+          centerMode: true
+        });
+
+        $(".banner-item-2").slick({ 
+          slidesToShow: 2,
+          slidesToScroll: 1, 
+          autoplay: true, 
+          autoplaySpeed: 3000,
           centerMode: true
         });
       });

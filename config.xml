@@ -10,4 +10,5 @@
     <content src="index.html" />
     <access origin="*" />
     <engine name="android" spec="~7.1.4" />
+    <plugin name="cordova-sqlite-storage" spec="~2.6.0" />
 </widget>

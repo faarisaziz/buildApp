@@ -34,12 +34,12 @@
   margin: 3px;
 }
 
-.banner-item-list {
+.banner-item, .banner-item-2 {
   margin-left: -35px;
 }
 
 .banner-item-list img {
-  width: 75%;
+  width: calc(100% - 25px);
   border-radius: 5px;
 }
 
