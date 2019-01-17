@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Remittance</title>
+    <title>DCSpay</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/slick.css">
@@ -13,11 +13,12 @@
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/slick.min.js"></script>
   </head>
-  <body>
+  <body id="deviceready">
     <div data-role="page" id="one">
       <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
-        <h1 class="ui-title ui-title-costum" role="heading" aria-level="1">Remittance</h1>
-        <a href="#rightpanel1" class="ui-btn ui-shadow ui-btn-right ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Options</a>
+        <img src="img/logo50x50.png" alt="DCS" class="logo-header">
+        <h1 class="ui-title ui-title-costum" role="heading" aria-level="1">DCSpay</h1>
+        <a href="#setting" class="ui-btn ui-shadow ui-btn-right ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Options</a>
         <div data-role="navbar" class="ui-navbar" role="navigation" style="position: fixed; bottom: 0; left: 0; z-index: 1000; right: 0 ">
           <ul class="ui-grid-b">
             <li class="ui-block-a">
@@ -141,7 +142,7 @@
         </div>
       </div>
 
-      <div data-role="panel" id="rightpanel1" data-position="right" data-display="reveal" data-theme="a">
+      <div data-role="panel" id="setting" data-position="right" data-display="reveal" data-theme="a">
         <h3>Pengaturan</h3>
 
         <ul data-role="listview" data-icon="false" class="setting-list">
@@ -390,104 +391,11 @@
       </div>
     </div>
 
-
     <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/functions/costum.js"></script>
+    <script src="js/index.js"></script>
     <script type="text/javascript">
-      $(document).on("ready", function() {
-        var client_id = localStorage.getItem("client_id");
-
-        if( client_id == null || client_id == "" ) {
-          initClientID();
-        } else {
-          refreshBalance();
-        }
-
-        $(".banner-item").slick({ 
-          slidesToShow: 1,
-          slidesToScroll: 1, 
-          autoplay: true, 
-          autoplaySpeed: 5000,
-          centerMode: true
-        });
-
-        $(".banner-item-2").slick({ 
-          slidesToShow: 2,
-          slidesToScroll: 1, 
-          autoplay: true, 
-          autoplaySpeed: 3000,
-          centerMode: true
-        });
-      });
-
-      function initClientID() {
-        var phone;
-        var number = prompt("Masukan no handphone Anda", "");
-
-        if (number == null || number == "") {
-          location.reload();
-        } else {
-          phone = number;
-        }
-
-        localStorage.setItem("client_id", phone);
-        initBalance();
-      }
-
-      function initBalance() {
-        localStorage.setItem("balance", 0);
-      }
-
-      function topupBalance() {
-        var amount = $("#topup-balance").val();
-        var balance = localStorage.getItem("balance");
-
-        localStorage.setItem("balance", parseInt(balance) + parseInt(amount));
-        refreshBalance();
-      }
-
-      function buyPulsa() {
-        var amount = $("#topup-balance").val();
-        var balance = localStorage.getItem("balance");
-        var pulsa = $("#select-pulsa").val();
-        var fee = (0.1 * parseFloat(pulsa));
-        var pulsa_total = (parseInt(pulsa) + parseInt(fee));
-
-        localStorage.setItem("balance", parseInt(balance) - parseInt(pulsa_total));
-        refreshBalance();
-      }
-
-      function refreshBalance() {
-        $('.balance-field').html(localStorage.getItem("balance"));
-        $("#topup-balance").val("");
-      }
-
-      function preparePLN() {
-        if ($("#radio-pln-prabayar").prop('checked') == true){
-          $("#pln-pascabayar").hide();
-          $("#pln-prabayar").show();
-        } else if ($("#radio-pln-pascabayar").prop('checked') == true) {
-          $("#pln-prabayar").hide();
-          $("#pln-pascabayar").show();
-        }
-      }
-
-      function callPulsaDetail() {
-        var pulsa = $("#select-pulsa").val();
-
-        if (pulsa.length > 0) {
-          var fee = (0.1 * parseFloat(pulsa));
-
-          $(".voucher span").html(pulsa);
-          $(".fee span").html(parseInt(fee));
-          $(".total span").html(parseInt(pulsa) + parseInt(fee));
-          $(".pulsa-detail").show();
-        } else {
-          $(".voucher span").html("0");
-          $(".fee span").html("0");
-          $(".total span").html("0");
-          $(".pulsa-detail").hide();
-        }
-      }
+        app.initialize();
     </script>
   </body>
 </html>

@@ -1,7 +1,6 @@
 .ui-header .ui-title, .ui-footer .ui-title-costum {
   text-align: left;
   margin-left: 20px;
-  text-transform: uppercase;
 }
 
 .ui-cash {
@@ -112,4 +111,45 @@ ul.setting-list.ui-listview {
 .footer-with-banner.ui-footer.ui-bar-inherit {
   background: none;
   border: none;
+}
+
+.ui-header .logo-header {
+  float: left;
+  height: 30px;
+  margin: 6px 6px 6px 20px;
+}
+
+.form-box {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 480px;
+  padding: 25px;
+  position: absolute;
+  display: inline-block;
+}
+
+.form-box .login-logo {
+  text-align: center;
+}
+
+.form-box .login-form-control {
+  margin: 10px 7px;
+  font-size: 14px;
+}
+
+.form-box .login-btn-control {
+  font-size: 14px;
+  padding: 15px;
+}
+
+.form-box .text-control {
+  font-size: 14px;
+}
+
+.form-box .or-control {
+  text-align: center;
+  font-weight: 600;
 }

@@ -1,19 +1,19 @@
 {
-  "_from": "cordova-sqlite-storage",
+  "_from": "cordova-sqlite-storage@2.6.0",
   "_id": "cordova-sqlite-storage@2.6.0",
   "_inBundle": false,
   "_integrity": "sha512-m+KylFwNRsQloJ6TZihupfma2muXkmNglh8cFSiJQqriTTm6eq0gyPaAuKxgoPswe679G+0aUai07NFC/f0GGQ==",
   "_location": "/cordova-sqlite-storage",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "cordova-sqlite-storage",
+    "raw": "cordova-sqlite-storage@2.6.0",
     "name": "cordova-sqlite-storage",
     "escapedName": "cordova-sqlite-storage",
-    "rawSpec": "",
+    "rawSpec": "2.6.0",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "2.6.0"
   },
   "_requiredBy": [
     "#USER",
@@ -21,7 +21,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/cordova-sqlite-storage/-/cordova-sqlite-storage-2.6.0.tgz",
   "_shasum": "84f5c56509d83b8629338f863e027482afd7fdcd",
-  "_spec": "cordova-sqlite-storage",
+  "_spec": "cordova-sqlite-storage@2.6.0",
   "_where": "C:\\Mobile\\remittance",
   "author": {
     "name": "various"

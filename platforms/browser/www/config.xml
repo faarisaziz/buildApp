@@ -2,11 +2,14 @@
 <widget id="com.remittance.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Remittance</name>
     <description>
-        Remittance and PPOB app.
-    </description>
+    Remittance and PPOB app.
+  </description>
     <author email="support@remittance.com" href="http://remittance.com">
-        PhoneGap Team
-    </author>
+    PhoneGap Team
+  </author>
     <content src="index.html" />
     <access origin="*" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashScreenBackgroundColor" value="white" />
 </widget>
