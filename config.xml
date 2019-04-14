@@ -1,16 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.remittance.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Remittance</name>
+<widget id="com.ayombati.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Ayombati</name>
     <description>
-    Remittance and PPOB app.
+    Ayombati is financial technology for Remittance and PPOB.
   </description>
-    <author email="support@remittance.com" href="http://remittance.com">
-    PhoneGap Team
+    <author email="support@ayombati.com" href="http://ayombati.com">
+    DCS Team
   </author>
     <content src="index.html" />
     <access origin="*" />
+    <splash src="splash.png" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashScreenDelay" value="60000" />
     <preference name="SplashScreenBackgroundColor" value="white" />
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />

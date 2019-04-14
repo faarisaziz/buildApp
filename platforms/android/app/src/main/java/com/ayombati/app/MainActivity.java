@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.remittance.app;
+package com.ayombati.app;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

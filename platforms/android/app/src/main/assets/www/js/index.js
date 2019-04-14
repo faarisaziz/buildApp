@@ -8,28 +8,24 @@ var app = {
   },
 
   onDeviceReady: function() {
-    app.receivedEvent('deviceready');
+    setTimeout(function () {
+      var devicebody = document.getElementById("devicebody");
+
+      devicebody.classList.remove("hidden");
+      navigator.splashscreen.hide();
+      app.receivedEvent('deviceready');
+    }, 3000);
   },
 
   receivedEvent: function(id) {
-    if(checkAuthenticationToken() == undefined) {
-      // window.location.href = 'sign.html';
-    } else {
-      $(".banner-item").slick({ 
-        slidesToShow: 1, slidesToScroll: 1, 
-        autoplay: true, autoplaySpeed: 5000,
-        centerMode: true
-      });
+    $(".banner-item").slick({ 
+      slidesToShow: 1, slidesToScroll: 1, autoplay: true,
+      autoplaySpeed: 5000, centerMode: true
+    });
 
-      $(".banner-item-2").slick({ 
-        slidesToShow: 2, slidesToScroll: 1, 
-        autoplay: true, autoplaySpeed: 3000,
-        centerMode: true
-      });
-    }
+    $(".banner-item-2").slick({ 
+      slidesToShow: 2, slidesToScroll: 1, autoplay: true,
+      autoplaySpeed: 3000, centerMode: true
+    });
   }
 };
-
-function checkAuthenticationToken() {
-  var auth_token = localStorage.getItem("auth_token");
-}

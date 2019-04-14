@@ -1,6 +1,14 @@
+.ui-mobile, .ui-mobile body {
+  height: auto !important;
+}
+
+.hidden {
+  display: none;
+}
+
 .ui-header .ui-title, .ui-footer .ui-title-costum {
   text-align: left;
-  margin-left: 20px;
+  margin-left: 45px;
 }
 
 .ui-cash {
@@ -8,25 +16,25 @@
 }
 
 .cash-title {
-  text-transform: uppercase;
   font-size: 12px;
+  text-transform: uppercase;
 }
 
 .cash-amount {
-  vertical-align: top;
   display: flex;
   font-size: 12px;
+  vertical-align: top;
 }
 
 .cash-amount span {
+  font-size: 18px;
   margin-left: 5px;
   margin-top: -2px;
-  font-size: 18px;
 }
 
 .cash-point {
-  text-transform: uppercase;
   font-size: 12px;
+  text-transform: uppercase;
 }
 
 .ui-btn-topup {
@@ -38,20 +46,13 @@
 }
 
 .banner-item-list img {
-  width: calc(100% - 25px);
   border-radius: 5px;
-}
-
-.alert-dev {
-  font-size: 10px;
-  color: red;
-  font-weight: 600;
-  letter-spacing: 0.8px;
+  width: calc(100% - 25px);
 }
 
 .ui-wallet {
-  text-align: center;
   padding: 20px 0;
+  text-align: center;
 }
 
 .ui-wallet-box .ui-block-a .ui-bar {
@@ -60,18 +61,14 @@
 
 .ui-wallet-box .ui-block-a .ui-bar .ui-btn-topup {
   margin: 0;
-  border-radius: 5px;
   font-size: 14px;
+  border-radius: 5px;
 }
 
 .ui-wallet-box .ui-block-a .ui-bar input[type=number],
 .ui-wallet-box .ui-block-a .ui-bar input[type=text] {
   font-size: 14px;
   padding: 10px;
-}
-
-ul.setting-list.ui-listview {
-  margin-top: 15px;
 }
 
 .setting-list li, .setting-list li a {
@@ -84,72 +81,28 @@ ul.setting-list.ui-listview {
 
 .setting-list li a.ui-btn {
   font-size: 12px;
-  font-weight: normal;
   padding-left: 25px;
-}
-
-.ui-wallet-detail .title {
-  font-weight: 600;
-  font-size: 14px;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-.ui-wallet-detail .ui-block-a div {
-  font-size: 13px;
-}
-
-.ui-wallet-detail .ui-block-b div {
-  font-size: 13px;
-  text-align: right;
-}
-
-.ui-wallet-detail div.total {
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .footer-with-banner.ui-footer.ui-bar-inherit {
-  background: none;
   border: none;
+  background: none;
 }
 
 .ui-header .logo-header {
   float: left;
   height: 30px;
-  margin: 6px 6px 6px 20px;
+  margin: 6px 6px 6px 10px;
 }
 
-.form-box {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  height: 480px;
-  padding: 25px;
-  position: absolute;
-  display: inline-block;
+.ppob-label {
+  font-size: 12px;
 }
 
-.form-box .login-logo {
-  text-align: center;
-}
-
-.form-box .login-form-control {
-  margin: 10px 7px;
+.ui-btn-topup.ui-btn {
   font-size: 14px;
-}
-
-.form-box .login-btn-control {
-  font-size: 14px;
-  padding: 15px;
-}
-
-.form-box .text-control {
-  font-size: 14px;
-}
-
-.form-box .or-control {
-  text-align: center;
-  font-weight: 600;
+  padding-top: 12.5px;
+  letter-spacing: 0.5px;
+  padding-bottom: 12.5px;
 }

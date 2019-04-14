@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Remittance",
-  "short_name": "Remittance",
-  "version": "com.remittance.app",
-  "description": "Remittance and PPOB app.",
-  "author": "PhoneGap Team",
+  "name": "Ayombati",
+  "short_name": "Ayombati",
+  "version": "com.ayombati.app",
+  "description": "Ayombati is financial technology for Remittance and PPOB.",
+  "author": "DCS Team",
   "icons": [],
   "start_url": "index.html"
 }

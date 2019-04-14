@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>DCSpay</title>
-    <link rel="shortcut icon" href="favicon.ico">
+    <title>Ayombati</title>
+
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
@@ -13,378 +13,175 @@
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/slick.min.js"></script>
   </head>
+
   <body id="deviceready">
-    <div data-role="page" id="one">
-      <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
-        <img src="img/logo50x50.png" alt="DCS" class="logo-header">
-        <h1 class="ui-title ui-title-costum" role="heading" aria-level="1">DCSpay</h1>
-        <a href="#setting" class="ui-btn ui-shadow ui-btn-right ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Options</a>
-        <div data-role="navbar" class="ui-navbar" role="navigation" style="position: fixed; bottom: 0; left: 0; z-index: 1000; right: 0 ">
-          <ul class="ui-grid-b">
-            <li class="ui-block-a">
-              <a href="#transfer" data-transition="slide" data-icon="recycle" class="ui-link ui-btn ui-icon-recycle ui-btn-icon-top">Transfer</a>
-            </li>
-            <li class="ui-block-b">
-              <a href="#shop" data-transition="slide" data-icon="shop" class="ui-link ui-btn ui-icon-shop ui-btn-icon-top">Deal</a>
-            </li>
-            <li class="ui-block-c">
-              <a href="#history" data-transition="slide" data-icon="bars" class="ui-link ui-btn ui-icon-bars ui-btn-icon-top">History</a>
-            </li>
+    <div id="devicebody" class="hidden">
+      <div data-role="page" id="one">
+        <div data-role="header" role="banner" class="ui-header ui-bar-inherit" style="overflow: hidden">
+          <img src="img/logo50x50.png" alt="DCS" class="logo-header">
+          <h1 class="ui-title ui-title-costum" role="heading">Ayombati</h1>
+
+          <a href="#setting" class="ui-btn ui-shadow ui-btn-right ui-corner-all ui-icon-gear ui-btn-icon-notext ui-btn-inline">Options</a>
+          <div data-role="navbar" class="ui-navbar" role="navigation">
+            <ul class="ui-grid-b">
+              <li class="ui-block-a">
+                <a href="#transfer" data-transition="slide" data-icon="recycle" class="ui-link ui-btn ui-icon-recycle ui-btn-icon-top">Transfer</a>
+              </li>
+              <li class="ui-block-b">
+                <a href="#shop" data-transition="slide" data-icon="shop" class="ui-link ui-btn ui-icon-shop ui-btn-icon-top">Deal</a>
+              </li>
+              <li class="ui-block-c">
+                <a href="#history" data-transition="slide" data-icon="bars" class="ui-link ui-btn ui-icon-bars ui-btn-icon-top">History</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-a ui-cash">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">My Cash</div>
+                <div class="cash-amount">Rp <span class="balance-field">0</span></div>
+                <div class="cash-point">Points <span>0</span></div>
+              </div>
+            </div>
+            <div class="ui-block-b">
+              <div class="ui-bar ui-bar-a">
+                <a href="#topup" data-transition="slide" class="ui-btn ui-btn-topup">Topup</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-grid-b">
+            <div class="ui-block-a">
+              <a href="#pln" onclick="" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
+                <div class="ppob-icon"><img src="img/ico/pln.png" alt="PLN"></div>
+                <div class="ppob-label">PLN</div>
+              </a>
+            </div>
+            <div class="ui-block-b">
+              <a href="#pulsa" onclick="" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
+                <div class="ppob-icon"><img src="img/ico/pulsa.png" alt="Pulsa"></div>
+                <div class="ppob-label">Pulsa</div>
+              </a>
+            </div>
+            <div class="ui-block-c">
+              <a href="#paketdata" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
+                <div class="ppob-icon"><img src="img/ico/paket-data.png" alt="Paket Data"></div>
+                <div class="ppob-label">Paket Data</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="ui-grid-b">
+            <div class="ui-block-a">
+              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              	<div class="ppob-icon"><img src="img/ico/pembayaran.png" alt="Pembayaran"></div>
+                <div class="ppob-label">Pembayaran</div>
+              </a>
+            </div>
+            <div class="ui-block-b">
+              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              	<div class="ppob-icon"><img src="img/ico/bpjs.png" alt="BPJS"></div>
+                <div class="ppob-label">BPJS</div>
+              </a>
+            </div>
+            <div class="ui-block-c">
+              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              	<div class="ppob-icon"><img src="img/ico/tv.png" alt="TV Kabel"></div>
+                <div class="ppob-label">TV Kabel</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="ui-grid-b">
+            <div class="ui-block-a">
+              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+                <div class="ppob-icon"><img src="img/ico/insurance.png" alt="Asuransi"></div>
+                <div class="ppob-label">Asuransi</div>
+              </a>
+            </div>
+            <div class="ui-block-b">
+              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+                <div class="ppob-icon"><img src="img/ico/voucher.png" alt="Voucher Game"></div>
+                <div class="ppob-label">Game</div>
+              </a>
+            </div>
+            <div class="ui-block-c">
+              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+                <div class="ppob-icon"><img src="img/ico/more.png" alt="Semua"></div>
+                <div class="ppob-label">Semua</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div data-role="footer" class="footer-with-banner">
+          <div class="banner-item">
+            <div class="banner-item-list">
+              <img src="img/banner.png" alt="Banner 1">
+            </div>
+            <div class="banner-item-list">
+              <img src="img/banner.png" alt="Banner 2">
+            </div>
+            <div class="banner-item-list">
+              <img src="img/banner.png" alt="Banner 3">
+            </div>
+          </div>
+
+          <br>
+
+          <div class="banner-item-2">
+            <div class="banner-item-list">
+              <img src="img/banner.png" alt="Banner 1">
+            </div>
+            <div class="banner-item-list">
+              <img src="img/banner.png" alt="Banner 2">
+            </div>
+            <div class="banner-item-list">
+              <img src="img/banner.png" alt="Banner 3">
+            </div>
+          </div>
+        </div>
+
+        <div data-role="panel" id="setting" data-position="right" data-display="reveal" data-theme="a">
+          <h3>Pengaturan</h3>
+
+          <ul data-role="listview" data-icon="false" class="setting-list">
+            <li data-role="list-divider">Akun</li>
+            <li><a href="#">Edit Profil</a></li>
+            <li><a href="#">Kode Promo</a></li>
+
+            <li data-role="list-divider">Keamanan</li>
+            <li><a href="#">Ubah Security Code</a></li>
+            <li><a href="#">Logout</a></li>
           </ul>
         </div>
       </div>
 
-      <div role="main" class="ui-content">
-        <div class="ui-grid-a ui-cash">
-          <div class="ui-block-a">
-            <div class="ui-bar ui-bar-a">
-              <div class="cash-title">My Cash</div>
-              <div class="cash-amount">Rp <span class="balance-field">0</span></div>
-              <div class="cash-point">Points <span>0</span></div>
-            </div>
-          </div>
-          <div class="ui-block-b">
-            <div class="ui-bar ui-bar-a">
-              <a href="#topup" data-transition="slide" class="ui-btn ui-btn-topup">Topup</a>
-            </div>
-          </div>
+      <div data-role="page" id="topup">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Topup</h1>
         </div>
 
-        <div class="ui-grid-b">
-          <div class="ui-block-a">
-            <a href="#pln" onclick="preparePLN()" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
-              <div class="ppob-icon"><img src="img/ico/pln.png" alt="PLN"></div>
-              <div class="ppob-label">PLN</div>
-            </a>
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/wallet.png" alt="Dompet">
+
+            <h4>Top up dompet dengan mudah</h4>
+            <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
           </div>
-          <div class="ui-block-b">
-            <a href="#pulsa" onclick="callPulsaDetail()" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
-              <div class="ppob-icon"><img src="img/ico/pulsa.png" alt="Pulsa"></div>
-              <div class="ppob-label">Pulsa</div>
-            </a>
-          </div>
-          <div class="ui-block-c">
-            <a href="#paketdata" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
-              <div class="ppob-icon"><img src="img/ico/paket-data.png" alt="Paket Data"></div>
-              <div class="ppob-label">Paket Data</div>
-            </a>
-          </div>
-        </div>
 
-        <div class="ui-grid-b">
-          <div class="ui-block-a">
-            <a href="#" class="ui-shadow ui-btn ui-corner-all">
-            	<div class="ppob-icon"><img src="img/ico/pembayaran.png" alt="Pembayaran"></div>
-              <div class="ppob-label">Pembayaran</div>
-            </a>
-          </div>
-          <div class="ui-block-b">
-            <a href="#" class="ui-shadow ui-btn ui-corner-all">
-            	<div class="ppob-icon"><img src="img/ico/bpjs.png" alt="BPJS"></div>
-              <div class="ppob-label">BPJS</div>
-            </a>
-          </div>
-          <div class="ui-block-c">
-            <a href="#" class="ui-shadow ui-btn ui-corner-all">
-            	<div class="ppob-icon"><img src="img/ico/tv.png" alt="TV Kabel"></div>
-              <div class="ppob-label">TV Kabel</div>
-            </a>
-          </div>
-        </div>
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Nominal Topup</div>
 
-        <div class="ui-grid-b">
-          <div class="ui-block-a">
-            <a href="#" class="ui-shadow ui-btn ui-corner-all">
-              <div class="ppob-icon"><img src="img/ico/insurance.png" alt="Asuransi"></div>
-              <div class="ppob-label">Asuransi</div>
-            </a>
-          </div>
-          <div class="ui-block-b">
-            <a href="#" class="ui-shadow ui-btn ui-corner-all">
-              <div class="ppob-icon"><img src="img/ico/voucher.png" alt="Voucher Game"></div>
-              <div class="ppob-label">Game</div>
-            </a>
-          </div>
-          <div class="ui-block-c">
-            <a href="#" class="ui-shadow ui-btn ui-corner-all">
-              <div class="ppob-icon"><img src="img/ico/more.png" alt="Semua"></div>
-              <div class="ppob-label">Semua</div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div data-role="footer" class="footer-with-banner">
-        <div class="banner-item">
-          <div class="banner-item-list">
-            <img src="img/banner.png" alt="Banner 1">
-          </div>
-          <div class="banner-item-list">
-            <img src="img/banner.png" alt="Banner 2">
-          </div>
-          <div class="banner-item-list">
-            <img src="img/banner.png" alt="Banner 3">
-          </div>
-        </div>
-
-        <br>
-
-        <div class="banner-item-2">
-          <div class="banner-item-list">
-            <img src="img/banner.png" alt="Banner 1">
-          </div>
-          <div class="banner-item-list">
-            <img src="img/banner.png" alt="Banner 2">
-          </div>
-          <div class="banner-item-list">
-            <img src="img/banner.png" alt="Banner 3">
-          </div>
-        </div>
-      </div>
-
-      <div data-role="panel" id="setting" data-position="right" data-display="reveal" data-theme="a">
-        <h3>Pengaturan</h3>
-
-        <ul data-role="listview" data-icon="false" class="setting-list">
-          <li data-role="list-divider">Akun</li>
-          <li><a href="#">Edit Profil</a></li>
-          <li><a href="#">Kode Promo</a></li>
-
-          <li data-role="list-divider">Keamanan</li>
-          <li><a href="#">Ubah Security Code</a></li>
-
-          <li data-role="list-divider">Tentang</li>
-          <li><a href="#">Informasi</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Saran</a></li>
-          <li><a href="#">Hubungi</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div data-role="page" id="topup">
-      <div data-role="header" data-theme="a">
-        <h1>Topup</h1>
-      </div>
-
-      <div role="main" class="ui-content">
-        <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Kembali</a>
-
-        <div class="ui-grid-solo ui-wallet">
-          <img src="img/ico/wallet.png" alt="Dompet">
-
-          <h4>Top up dompet dengan mudah</h4>
-          <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
-        </div>
-
-        <div class="ui-grid-solo ui-wallet-box">
-          <div class="ui-block-a">
-            <div class="ui-bar ui-bar-a">
-              <div class="cash-title">Nominal Topup</div>
-
-              <input type="number" id="topup-balance" placeholder="Nominal Topup Yang Anda Inginkan">
-              <a href="#topup" data-rel="back" class="ui-btn ui-btn-topup" onclick="topupBalance()">Bayar Sekarang</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div data-role="page" id="transfer">
-      <div data-role="header" data-theme="a">
-        <h1>Transfer</h1>
-      </div>
-
-      <div role="main" class="ui-content">
-        <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Kembali</a>
-
-        <div class="ui-grid-solo ui-wallet">
-          <img src="img/ico/transfer.png" alt="Dompet">
-
-          <h4>Transfer mudah tanpa batas</h4>
-          <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan konsep bisnis dan payment gateway.</p>
-        </div>
-
-        <div class="ui-grid-solo ui-wallet-box">
-          <div class="ui-block-a">
-            <div class="ui-bar ui-bar-a">
-              <div class="cash-title">Handphone Tujuan</div>
-              <input type="number" id="transfer-to" placeholder="No Handphone Tujuan">
-
-              <br>
-
-              <div class="cash-title">Nominal Transfer</div>
-              <input type="number" id="transfer-balance" placeholder="Nominal Yang Ingin Anda Transfer">
-
-              <a href="#transfer" data-rel="back" class="ui-btn ui-btn-transfer">Transfer Sekarang</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div data-role="page" id="history">
-      <div data-role="header" data-theme="a">
-        <h1>History</h1>
-      </div>
-
-      <div role="main" class="ui-content">
-        <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Kembali</a>
-
-        <ul data-role="listview" data-inset="true">
-          <li>
-            <a href="#">
-              <img src="img/apple.png" class="ui-li-thumb">
-              <h2>iOS 6.1</h2>
-              <p>Apple released iOS 6.1</p>
-              <p class="ui-li-aside">iOS</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="img/apple.png" class="ui-li-thumb">
-              <h2>BlackBerry 10</h2>
-              <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
-              <p class="ui-li-aside">BlackBerry</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="img/apple.png" class="ui-li-thumb">
-              <h2>WP 7.8</h2>
-              <p>Nokia rolls out WP 7.8 to Lumia 800</p>
-              <p class="ui-li-aside">Windows Phone</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <h2>Symbian</h2>
-              <p>Nokia confirms the end of Symbian</p>
-              <p class="ui-li-aside">Symbian</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div data-role="page" id="pln">
-      <div data-role="header" data-theme="a">
-        <h1>PLN</h1>
-      </div>
-
-      <div role="main" class="ui-content">
-        <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Kembali</a>
-
-        <fieldset data-role="controlgroup">
-          <input type="radio" name="pln-type" id="radio-pln-prabayar" value="pln-prabayar" checked="checked" onchange="preparePLN()">
-          <label for="radio-pln-prabayar">Prabayar</label>
-
-          <input type="radio" name="pln-type" id="radio-pln-pascabayar" value="pln-pascabayar" onchange="preparePLN()">
-          <label for="radio-pln-pascabayar">Pascabayar</label>
-        </fieldset>
-
-        <div class="ui-grid-solo ui-wallet-box">
-          <div class="ui-block-a">
-            <div class="ui-bar ui-bar-a">
-              <div id="pln-prabayar" style="display: none">
-                <div class="cash-title">Nomor Meter</div>
-                <input type="number" id="no-meter" placeholder="Nomor Meter">
-
-                <div class="cash-title">Pilih Nominal</div>
-                <select name="select-amount" id="select-amount">
-                  <option value="20000">Rp20000</option>
-                  <option value="50000">Rp50000</option>
-                  <option value="100000">Rp100000</option>
-                  <option value="200000">Rp200000</option>
-                  <option value="500000">Rp500000</option>
-                </select>
+                <input type="number" id="topup-balance" placeholder="Nominal Topup Yang Anda Inginkan">
+                <a href="#topup" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
               </div>
-
-              <div id="pln-pascabayar" style="display: none">
-                <div class="cash-title">ID Pelanggan</div>
-                <input type="text" id="id-pln-user" placeholder="ID Pelanggan">
-              </div>
-
-              <a href="#topup" data-rel="back" class="ui-btn ui-btn-pln">Bayar Sekarang</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div data-role="page" id="pulsa">
-      <div data-role="header" data-theme="a">
-        <h1>Pulsa</h1>
-      </div>
-
-      <div role="main" class="ui-content">
-        <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Kembali</a>
-
-        <div class="ui-grid-solo ui-wallet-box">
-          <div class="ui-block-a">
-            <div class="ui-bar ui-bar-a">
-              <div class="cash-title">Nomor Ponsel</div>
-              <input type="number" id="no-meter" placeholder="Nomor Ponsel">
-
-              <div class="cash-title">Pilih Nominal</div>
-              <select name="select-amount" id="select-pulsa" onchange="callPulsaDetail()">
-                <option value="10000">Rp10000</option>
-                <option value="25000">Rp25000</option>
-                <option value="50000">Rp50000</option>
-                <option value="100000">Rp100000</option>
-                <option value="150000">Rp150000</option>
-                <option value="300000">Rp300000</option>
-              </select>
-
-              <a href="#topup" data-rel="back" class="ui-btn ui-btn-topup" onclick="buyPulsa()">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="ui-grid-a ui-wallet-detail pulsa-detail" style="display: none">
-          <div class="title">Detail</div>
-
-          <div class="ui-block-a">
-            <div>Harga Voucher</div>
-            <div>Biaya Transaksi</div>
-            <hr>
-            <div class="total">Total Bayar</div>
-          </div>
-          <div class="ui-block-b">
-            <div class="voucher">Rp<span>0</span></div>
-            <div class="fee">Rp<span>0</span></div>
-            <hr>
-            <div class="total">Rp<span>0</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div data-role="page" id="paketdata">
-      <div data-role="header" data-theme="a">
-        <h1>Paket Data</h1>
-      </div>
-
-      <div role="main" class="ui-content">
-        <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Kembali</a>
-
-        <div class="ui-grid-solo ui-wallet-box">
-          <div class="ui-block-a">
-            <div class="ui-bar ui-bar-a">
-              <div class="cash-title">Nomor Ponsel</div>
-              <input type="number" id="no-meter" placeholder="Nomor Ponsel">
-
-              <div class="cash-title">Pilih paket</div>
-              <select name="select-paket-data" id="select-paket-data">
-                <option value="1024">Internet 4G 1GB</option>
-                <option value="2048">Internet 4G 2GB</option>
-                <option value="5105">Internet 4G 5GB</option>
-                <option value="10240">Internet 4G 10GB</option>
-                <option value="20480">Internet 4G 20GB</option>
-                <option value="30720">Internet 4G 30GB</option>
-              </select>
-
-              <a href="#topup" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Beli Sekarang</a>
             </div>
           </div>
         </div>
@@ -392,7 +189,6 @@
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
-    <script src="js/functions/costum.js"></script>
     <script src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
