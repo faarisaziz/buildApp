@@ -19,6 +19,7 @@ var app = {
 
   receivedEvent: function(id) {
     // pengecekan sudah login atau belum disini
+    checkSession();
     $(".banner-item").slick({ 
       slidesToShow: 1, slidesToScroll: 1, autoplay: true,
       autoplaySpeed: 5000, centerMode: true

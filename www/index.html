@@ -152,7 +152,7 @@
 
             <li data-role="list-divider">Keamanan</li>
             <li><a href="#">Ubah Security Code</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -176,7 +176,25 @@
           <br>
 
           <div class="text-control">Don't have an account?</div>
-          <button class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5 login-btn-control">Sign up</button>
+          <a href="#signup" class="ui-btn ui-btn-a ui-corner-all mc-top-margin-1-5 login-btn-control">Sign up</a>
+        </div>
+      </div>
+
+      <div data-role="page" id="signup">
+        <div class="form-box">
+          <h1 class="login-logo">
+            <img src="img/logo50x50.png" alt="DCS" class="logo-header"> DCSpay
+          </h1>
+
+          <input type="text" name="txt-username" id="signup-username" placeholder="Username" value="" class="signup-form-control">
+          <input type="text" name="txt-email" id="signup-email" placeholder="Email" value="" class="signup-form-control">
+          <input type="text" name="txt-phone" id="signup-phone" placeholder="Phone" value="" class="signup-form-control">
+          <input type="password" name="txt-password" id="signup-password1" placeholder="Password" value="" class="signup-form-control">
+          <input type="password" name="txt-password" id="signup-password2" placeholder="Password Confirmation" value="" class="signup-form-control">
+
+          <br>
+
+          <button class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5 signup-btn-control" onclick="signup()">Sign Up</button>
         </div>
       </div>
 
