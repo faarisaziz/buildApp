@@ -5,6 +5,7 @@ function checkSession() {
 		$.mobile.changePage("#login");
 	} else {
 		$.mobile.changePage("#one");
+		// $(".balance-field").val() = window.localStorage.getItem("balance");
 	}
 }
 
@@ -17,12 +18,20 @@ function login() {
     .done(function( data ) {
     	if(data.id) {
     		window.localStorage.setItem("userId", data.id);
-	    	// window.localStorage.setItem("username", document.getElementById("usernameTextBox"));
+	    	// window.localStorage.setItem("balance", data.balance);
 	    	$.mobile.changePage("#one");
     	} else {
     		console.log(data.message);
     	}
-  });
+  	});
+}
+
+function getUserDetail(userId) {
+	$.get( urlAyombati + "/users/" + userId + ".json")
+		.done(function( data ) {
+			console.log(data);
+			window.localStorage.setItem("accBalance", data.account_balance);
+		});
 }
 
 function logout() {
@@ -40,8 +49,23 @@ function signup() {
 	var pass_2 = $("#signup-password2").val();
 	var parameter = {username: user, email: mail, phone: pone, password: pass_1, password_confirmation: pass_2};
 
-	$.post( urlAyombati + "/users", parameter )
+	$.post( urlAyombati + "/users.json", parameter )
     .done(function( data ) {
     	console.log(data);
-  });
+  	});
+}
+
+function topup() {
+	var user = window.localStorage.getItem("userId");
+	var topup_amount = $("#topup-balance").val();
+	var parameter = {userId: user, amount: topup_amount}
+
+	$.post( urlAyombati + "/topup.json", parameter )
+		.done(function( data	) {
+			console.log(data);
+		});
+}
+
+function pulsa() {
+
 }
