@@ -22,12 +22,12 @@ var app = {
     checkSession();
     $(".banner-item").slick({ 
       slidesToShow: 1, slidesToScroll: 1, autoplay: true,
-      autoplaySpeed: 5000, centerMode: true
+      autoplaySpeed: 5000, centerMode: true, arrows: false
     });
 
     $(".banner-item-2").slick({ 
       slidesToShow: 2, slidesToScroll: 1, autoplay: true,
-      autoplaySpeed: 3000, centerMode: true
+      autoplaySpeed: 3000, centerMode: true, arrows: false
     });
   }
 };

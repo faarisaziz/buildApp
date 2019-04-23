@@ -22,13 +22,13 @@
           <div data-role="navbar" class="ui-navbar" role="navigation">
             <ul class="ui-grid-b">
               <li class="ui-block-a">
-                <a href="#transfer" data-transition="slide" data-icon="recycle" class="ui-link ui-btn ui-icon-recycle ui-btn-icon-top">Transfer</a>
+                <a href="#transfer" data-transition="slideup" data-icon="recycle" class="ui-link ui-btn ui-icon-recycle ui-btn-icon-top">Transfer</a>
               </li>
               <li class="ui-block-b">
-                <a href="#shop" data-transition="slide" data-icon="shop" class="ui-link ui-btn ui-icon-shop ui-btn-icon-top">Deal</a>
+                <a href="#shop" data-transition="slideup" data-icon="shop" class="ui-link ui-btn ui-icon-shop ui-btn-icon-top">Deal</a>
               </li>
               <li class="ui-block-c">
-                <a href="#history" data-transition="slide" data-icon="bars" class="ui-link ui-btn ui-icon-bars ui-btn-icon-top">History</a>
+                <a href="#history" data-transition="slideup" data-icon="bars" class="ui-link ui-btn ui-icon-bars ui-btn-icon-top">History</a>
               </li>
             </ul>
           </div>
@@ -73,19 +73,19 @@
 
           <div class="ui-grid-b">
             <div class="ui-block-a">
-              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              <a href="#pembayaran" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
               	<div class="ppob-icon"><img src="img/ico/pembayaran.png" alt="Pembayaran"></div>
                 <div class="ppob-label">Pembayaran</div>
               </a>
             </div>
             <div class="ui-block-b">
-              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              <a href="#bpjs" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
               	<div class="ppob-icon"><img src="img/ico/bpjs.png" alt="BPJS"></div>
                 <div class="ppob-label">BPJS</div>
               </a>
             </div>
             <div class="ui-block-c">
-              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              <a href="#tvkabel" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
               	<div class="ppob-icon"><img src="img/ico/tv.png" alt="TV Kabel"></div>
                 <div class="ppob-label">TV Kabel</div>
               </a>
@@ -94,13 +94,13 @@
 
           <div class="ui-grid-b">
             <div class="ui-block-a">
-              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              <a href="#asuransi" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
                 <div class="ppob-icon"><img src="img/ico/insurance.png" alt="Asuransi"></div>
                 <div class="ppob-label">Asuransi</div>
               </a>
             </div>
             <div class="ui-block-b">
-              <a href="#" class="ui-shadow ui-btn ui-corner-all">
+              <a href="#game" data-transition="slide" class="ui-shadow ui-btn ui-corner-all">
                 <div class="ppob-icon"><img src="img/ico/voucher.png" alt="Voucher Game"></div>
                 <div class="ppob-label">Game</div>
               </a>
@@ -147,11 +147,11 @@
 
           <ul data-role="listview" data-icon="false" class="setting-list">
             <li data-role="list-divider">Akun</li>
-            <li><a href="#">Edit Profil</a></li>
-            <li><a href="#">Kode Promo</a></li>
+            <li><a href="#profil" data-transition="pop">Edit Profil</a></li>
+            <li><a href="#kodepromo" data-transition="pop">Kode Promo</a></li>
 
             <li data-role="list-divider">Keamanan</li>
-            <li><a href="#">Ubah Security Code</a></li>
+            <li><a href="#security" data-transition="pop">Ubah Security Code</a></li>
             <li><a href="#" onclick="logout()">Logout</a></li>
           </ul>
         </div>
@@ -218,7 +218,392 @@
                 <div class="cash-title">Nominal Topup</div>
 
                 <input type="number" id="topup-balance" placeholder="Nominal Topup Yang Anda Inginkan">
-                <a href="#topup" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="pln">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>PLN</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/pln.png" alt="Listrik">
+
+            <h4>Bayar PLN dengan mudah</h4>
+            <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Kode PLN</div>
+
+                <input type="number" id="pln-balance" placeholder="Nominal Topup Yang Anda Inginkan">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="pulsa">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Pulsa</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/pulsa.png" alt="Pulsa">
+
+            <h4>Bayar atau isi ulang Pulsa dengan mudah</h4>
+            <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Nomer Handphone</div>
+
+                <input type="number" id="pulsa-number" placeholder="Nomer Handphone">
+                <input type="number" id="pulsa-balance" placeholder="Nominal Topup Yang Anda Inginkan">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="paketdata">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Paket Data</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/paket-data.png" alt="Paket Data">
+
+            <h4>Isi Ulang Paket Data</h4>
+            <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Nomer Handphone</div>
+
+                <input type="number" id="paketdata-number" placeholder="Nomor Handphone">
+                <input type="number" id="paketdata-balance" placeholder="Tipe Paket">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="pembayaran">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Pulsa</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/pembayaran.png" alt="Pembayaran">
+
+            <h4>Transaksi Pembayaran dengan mudah</h4>
+            <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Pembayaran</div>
+
+                <input type="number" id="pembayaran-balance" placeholder="Nominal Topup Yang Anda Inginkan">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="bpjs">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>BPJS</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/bpjs.png" alt="BPJS">
+
+            <h4>Pembayaran BPJS dengan mudah</h4>
+            <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">BPJS</div>
+
+                <input type="number" id="bpjs-balance" placeholder="Nominal Topup Yang Anda Inginkan">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="tvkabel">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>TV Kabel</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/tv.png" alt="TV Kabel">
+
+            <h4>Transaksi TV Kabel dengan mudah</h4>
+            <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">TV Kabel</div>
+
+                <input type="number" id="tvkabel-balance" placeholder="Nominal Topup Yang Anda Inginkan">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="asuransi">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Asuransi</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/insurance.png" alt="Asuransi">
+
+            <h4>Bayar Asuransi dengan mudah</h4>
+            <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Asuransi</div>
+
+                <input type="number" id="asuransi-balance" placeholder="Nominal Topup Yang Anda Inginkan">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="game">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Game</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/voucher.png" alt="Voucer">
+
+            <h4>Voucer Game Termurah</h4>
+            <p>Bentuk proses dan tampilan Top up ini akan disesuaikan kembali dengan payment gateway.</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Voucer Game</div>
+
+                <input type="number" id="game-balance" placeholder="Nominal Topup Yang Anda Inginkan">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="transfer">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Transfer</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/wallet.png" alt="Foto Profil">
+
+            <h4>Transfer</h4>
+            <p>Transaksi antar pengguna lebih mudah</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Nominal Transfer</div>
+
+                <input type="text" id="transfer-balance" placeholder="Nominal Yang Anda Inginkan">
+                <input type="text" id="transfer-receiver" placeholder="Penerima">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Transfer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="shop">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Deal</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/wallet.png" alt="Foto Profil">
+
+            <h4>Deal</h4>
+            <p>Deal lebih mudah</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Nominal Deal</div>
+
+                <input type="text" id="deal-balance" placeholder="Nominal Yang Anda Inginkan">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Deal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="history">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>History</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/wallet.png" alt="Foto Profil">
+
+            <h4>Riwayat</h4>
+            <p>Daftar Riwayat Aktifitas</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Riwayat</div>
+
+                <input type="text" id="riwayat-balance" placeholder="Riwayat" disabled="disabled">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Hapus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="profil">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Profil</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/wallet.png" alt="Foto Profil">
+
+            <h4>Profil</h4>
+            <p>Ubah Data Pribadi Anda</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Data</div>
+
+                <input type="text" id="profile-username" placeholder="Username" disabled="disabled">
+                <input type="text" id="profile-email" placeholder="Email">
+                <input type="text" id="profile-phone" placeholder="Phone">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Simpan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="security">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Security</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/wallet.png" alt="Foto Profil">
+
+            <h4>Profil</h4>
+            <p>Ubah Data Security Anda</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Data</div>
+
+                <input type="password" id="profile-old-password" placeholder="Password Lama">
+                <input type="password" id="profile-new-password1" placeholder="Password Baru">
+                <input type="password" id="profile-new-password2" placeholder="Password Baru">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Simpan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="kodepromo">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Kode Promo</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/wallet.png" alt="Foto Profil">
+
+            <h4>Kode Promo</h4>
+            <p>Masukan Kode Promo dengan berbagai keuntungan</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Promo</div>
+
+                <input type="text" id="promo-kode" placeholder="Kode Promo">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Simpan</a>
               </div>
             </div>
           </div>
