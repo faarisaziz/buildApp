@@ -14,7 +14,7 @@
   <body id="deviceready">
     <div id="devicebody" class="hidden">
       <div data-role="page" id="one">
-        <div data-role="header" role="banner" class="ui-header ui-bar-inherit" style="overflow: hidden">
+        <div data-role="header" role="banner" class="ui-header ui-bar-inherit" style="overflow: hidden"  id="reload">
           <img src="img/logo50x50.png" alt="DCS" class="logo-header">
           <h1 class="ui-title ui-title-costum" role="heading">Ayombati</h1>
 
@@ -25,10 +25,10 @@
                 <a href="#transfer" data-transition="slideup" data-icon="recycle" class="ui-link ui-btn ui-icon-recycle ui-btn-icon-top">Transfer</a>
               </li>
               <li class="ui-block-b">
-                <a href="#shop" data-transition="slideup" data-icon="shop" class="ui-link ui-btn ui-icon-shop ui-btn-icon-top">Deal</a>
+                <a href="#shop" data-transition="slideup" data-icon="shop" class="ui-link ui-btn ui-icon-shop ui-btn-icon-top">Promo</a>
               </li>
               <li class="ui-block-c">
-                <a href="#history" data-transition="slideup" data-icon="bars" class="ui-link ui-btn ui-icon-bars ui-btn-icon-top">History</a>
+                <a href="#history" onclick="riwayat()" data-transition="slideup" data-icon="bars" class="ui-link ui-btn ui-icon-bars ui-btn-icon-top">History</a>
               </li>
             </ul>
           </div>
@@ -40,15 +40,30 @@
               <div class="ui-bar ui-bar-a">
                 <div class="cash-title">My Cash</div>
                 <div class="cash-amount">Rp <span class="balance-field">0</span></div>
-                <div class="cash-point">Points <span>0</span></div>
+                <div class="cash-point">Points <span class="point-field">0</span></div>
               </div>
             </div>
             <div class="ui-block-b">
               <div class="ui-bar ui-bar-a">
-                <a href="#topup" data-transition="slide" class="ui-btn ui-btn-topup">Topup</a>
+                <div class="cash-title">My Coin</div>
+                <div class="cash-amount">C <span class="coin-field">0</span></div>
+                <div class="cash-point"><span class="coin-field">Coins</span></div>
               </div>
             </div>
           </div>
+          <div class="ui-grid-a ui-cash">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <a href="#topup" data-transition="slide" class="ui-btn ui-btn-topup">Topup</a>
+              </div>
+            </div>
+            <div class="ui-block-b">
+              <div class="ui-bar ui-bar-a">
+                <a href="#point" data-transition="slide" class="ui-btn ui-btn-topup">Point</a>
+              </div>
+            </div>
+          </div>
+
 
           <div class="ui-grid-b">
             <div class="ui-block-a">
@@ -218,7 +233,39 @@
                 <div class="cash-title">Nominal Topup</div>
 
                 <input type="number" id="topup-balance" placeholder="Nominal Topup Yang Anda Inginkan">
-                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Bayar Sekarang</a>
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="topup()">Bayar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="point">
+        <div data-role="header" data-theme="a">
+          <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
+          <h1>Point</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+          <div class="ui-grid-solo ui-wallet">
+            <img src="img/ico/wallet.png" alt="Dompet">
+
+            <h4>Isi Point Anda</h4>
+            <p>Membeli Point dengan saldo</p>
+          </div>
+
+          <div class="ui-grid-solo ui-wallet-box">
+            <div class="ui-block-a">
+              <div class="ui-bar ui-bar-a">
+                <div class="cash-title">Pilih Jumlah Pembelian</div>
+                <select name="select-native-1" id="coin-balance">
+                  <option value="100">100</option>
+                  <option value="200">200</option>
+                  <option value="500">500</option>
+                  <option value="750">750</option>
+                  <option value="1000">1000</option>
+                </select>
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="point()">Beli</a>
               </div>
             </div>
           </div>
@@ -462,9 +509,9 @@
               <div class="ui-bar ui-bar-a">
                 <div class="cash-title">Nominal Transfer</div>
 
-                <input type="text" id="transfer-balance" placeholder="Nominal Yang Anda Inginkan">
-                <input type="text" id="transfer-receiver" placeholder="Penerima">
-                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Transfer</a>
+                <input type="text" id="transfer-receiver" placeholder="Nomor HP Penerima">
+                <input type="text" id="transfer-amount" placeholder="Nominal Yang Anda Inginkan">
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="transfer()">Transfer</a>
               </div>
             </div>
           </div>
@@ -474,24 +521,24 @@
       <div data-role="page" id="shop">
         <div data-role="header" data-theme="a">
           <a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-inline">Kembali</a>
-          <h1>Deal</h1>
+          <h1>Promo</h1>
         </div>
 
         <div role="main" class="ui-content">
           <div class="ui-grid-solo ui-wallet">
             <img src="img/ico/wallet.png" alt="Foto Profil">
 
-            <h4>Deal</h4>
-            <p>Deal lebih mudah</p>
+            <h4>Promo</h4>
+            <p>List Promo</p>
           </div>
 
           <div class="ui-grid-solo ui-wallet-box">
             <div class="ui-block-a">
               <div class="ui-bar ui-bar-a">
-                <div class="cash-title">Nominal Deal</div>
+                <div class="cash-title">Gunakan Promo</div>
 
                 <input type="text" id="deal-balance" placeholder="Nominal Yang Anda Inginkan">
-                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Deal</a>
+                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Gunakan</a>
               </div>
             </div>
           </div>
@@ -506,20 +553,12 @@
 
         <div role="main" class="ui-content">
           <div class="ui-grid-solo ui-wallet">
-            <img src="img/ico/wallet.png" alt="Foto Profil">
-
             <h4>Riwayat</h4>
             <p>Daftar Riwayat Aktifitas</p>
           </div>
 
           <div class="ui-grid-solo ui-wallet-box">
-            <div class="ui-block-a">
-              <div class="ui-bar ui-bar-a">
-                <div class="cash-title">Riwayat</div>
-
-                <input type="text" id="riwayat-balance" placeholder="Riwayat" disabled="disabled">
-                <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Hapus</a>
-              </div>
+            <div class="ui-block-a" id="riwayat-list">
             </div>
           </div>
         </div>
@@ -573,7 +612,6 @@
               <div class="ui-bar ui-bar-a">
                 <div class="cash-title">Data</div>
 
-                <input type="password" id="profile-old-password" placeholder="Password Lama">
                 <input type="password" id="profile-new-password1" placeholder="Password Baru">
                 <input type="password" id="profile-new-password2" placeholder="Password Baru">
                 <a href="#" data-rel="back" class="ui-btn ui-btn-topup" onclick="">Simpan</a>
@@ -615,6 +653,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/pulltorefresh.js"></script>
     <script src="js/index.js"></script>
     <script src="js/function.js"></script>
     <script type="text/javascript">

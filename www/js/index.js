@@ -29,5 +29,15 @@ var app = {
       slidesToShow: 2, slidesToScroll: 1, autoplay: true,
       autoplaySpeed: 3000, centerMode: true, arrows: false
     });
+
+    PullToRefresh.init({
+    mainElement: '#reload', // above which element?
+    onRefresh: function (done) {
+      setTimeout(function () {
+        done(); // end pull to refresh
+        getUserDetail(window.localStorage.getItem("userId"));
+      }, 1500);
+      }
+    });
   }
 };
