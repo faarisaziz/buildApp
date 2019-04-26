@@ -1,4 +1,4 @@
-var urlAyombati = "http://127.0.0.1:8000";
+var urlAyombati = "http://api.ayombati.co.id";
 
 var userId = '';
 
