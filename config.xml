@@ -9,7 +9,6 @@
   </author>
     <content src="index.html" />
     <access origin="*" />
-    <!-- <splash src="splash.png" /> -->
     <preference name="DisallowOverscroll" value="true" />
     <preference name="SplashScreenDelay" value="60000" />
     <preference name="SplashScreenBackgroundColor" value="white" />
